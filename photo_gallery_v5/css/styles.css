@@ -47,24 +47,23 @@ img:hover {
   transition: 1s;
 }
 
-/* Grid Layout */
-main {
-    max-width: 1000px;
-    justify-content: center;
-    margin: 25px auto;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, auto));
-    grid-column-gap: 25px;
-    grid-row-gap: 21px;
-}
-
-
 .data-caption {
   background-image: linear-gradient(grey, black);
   font-family: sans-serif;
   font-size: 1.1em;
   font-weight: 500;
+}
+
+/* Grid Layout */
+main {
+    display: grid;
+    justify-content: center;
+    margin: 25px auto;
+    max-width: 1000px;
+    padding: 0;
+    grid-column-gap: 25px;
+    grid-row-gap: 21px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, auto));
 }
 
 /* Flex Layout*/
