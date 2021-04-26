@@ -47,12 +47,9 @@ img:hover {
   transition: 1s;
 }
 
-.fancybox-container {
-  background-color: black;
-  opacity: 50;
-}
 
-.fancybox-caption {
+
+.data-caption {
   background-image: linear-gradient(grey, black);
   font-family: sans-serif;
   font-size: 1.1em;
@@ -80,7 +77,7 @@ main {
     margin: 3em;
   }
 
-  .fancybox-caption {
+  .data-caption {
     max-width: 40%;
     border-radius: 1em;
     margin: auto;

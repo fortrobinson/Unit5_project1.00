@@ -1,23 +1,18 @@
-$('.searchPhoto').keyup(function(event) {
-  const searchGallery = new RegExp($.map($(this).val().trim().split(' '), function(value) {
-    return '(?=.*?' + value + ')';
-  }).join(''), 'i');
-  $('img').parent().hide().removeAttr("data-fancybox").filter(function(){
-    return searchGallery.exec($(this).text());
-  }).show().attr("data-fancybox", "images");
+window.addEventListener('load', function() {
+  baguetteBox.run('.searchPhoto');
 });
 
+const img = getElementsByTagName('a');
+const input = getElementById('searchbar')
 
-let $captionArray = [];
-
-$('p').each(function() {
-  let $cap = $(this).text();
-  $captionArray.push({caption: $cap});
+input.addEventListener('keyup', search => {
+    const searchInput = search.target.value.toLowerCase();
+    for( i = 0; i < img.length; i++) {
+        const inputValue = img[i].getAttribute('p');
+        if (inputValue.toLocaleLowerCase().indexOf(searchInput) > -1) {
+            img[i].style.display = "";
+        } else {
+            img[i].style.display= "none";
+        }
+    }
 });
-
-let $links = $('a');
-
-for(let i = 0; i < 12; i++)
-{
-  $($links[i]).attr('data-caption', $captionArray[i].caption);
-}
