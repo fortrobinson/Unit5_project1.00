@@ -1,14 +1,14 @@
 window.addEventListener('load', function() {
-  baguetteBox.run('.searchPhoto');
+  baguetteBox.run('main');
 });
 
-const img = getElementsByTagName('a');
-const input = getElementById('searchbar')
+const img = document.getElementsByTagName('a');
+const input = document.getElementById('searchbar')
 
 input.addEventListener('keyup', search => {
     const searchInput = search.target.value.toLowerCase();
     for( i = 0; i < img.length; i++) {
-        const inputValue = img[i].getAttribute('p');
+        const inputValue = img[i].getAttribute('data-caption');
         if (inputValue.toLocaleLowerCase().indexOf(searchInput) > -1) {
             img[i].style.display = "";
         } else {
