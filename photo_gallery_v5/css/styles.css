@@ -3,8 +3,6 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   background-image: linear-gradient(to bottom right, aqua, green);
   background-repeat: no-repeat;
   background-size: cover;
@@ -96,4 +94,3 @@ main {
     font-size: 1.2em;
     bottom: 0;
   }
-}
