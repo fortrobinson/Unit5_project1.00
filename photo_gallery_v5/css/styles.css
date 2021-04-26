@@ -47,6 +47,17 @@ img:hover {
   transition: 1s;
 }
 
+/* Grid Layout */
+main {
+    max-width: 1000px;
+    justify-content: center;
+    margin: 25px auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+    grid-column-gap: 25px;
+    grid-row-gap: 21px;
+}
 
 
 .data-caption {
@@ -56,7 +67,8 @@ img:hover {
   font-weight: 500;
 }
 
-main {
+/* Flex Layout*/
+/* main {
   min-height: 80%;
 }
 
@@ -71,7 +83,7 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     max-width: 85%;
-  }
+  } */
 
   img {
     margin: 3em;
